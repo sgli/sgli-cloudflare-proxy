@@ -5,6 +5,11 @@ const PROXY_RULES = [
         targetDomain: 'ws.okx.com', 
         targetPort: 8443, 
         targetProtocol: 'wss' 
+    },
+    { 
+        localPrefix: '/postman', 
+        targetDomain: 'ws.postman-echo.com', 
+        targetProtocol: 'wss' 
     }
 ];
 
