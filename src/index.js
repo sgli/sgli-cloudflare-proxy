@@ -1,7 +1,7 @@
 // src/index.js - 纯 WebSocket 代理
 const PROXY_RULES = [
     { 
-        localPrefix: '/okx-wx', 
+        localPrefix: '/okx-ws', 
         targetDomain: 'ws.okx.com', 
         targetPort: 8443, 
         targetProtocol: 'wss' 
