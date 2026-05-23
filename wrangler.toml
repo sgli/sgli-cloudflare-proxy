@@ -4,9 +4,9 @@ main = "src/index.js"
 compatibility_date = "2024-12-18"
 
 # 绑定自定义域名（需要先在 Cloudflare 添加域名）
-routes = [
-     { pattern = "proxy.chilldude.cn", custom_domain = true }
-]
+#routes = [
+#     { pattern = "proxy.chilldude.cn", custom_domain = true }
+#]
 
 # 可选：环境变量
 [vars]
