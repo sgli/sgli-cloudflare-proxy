@@ -31,6 +31,7 @@ async function handleWebSocket(request, config) {
     const targetUrl = config.targetPort 
         ? `${config.targetProtocol}://${config.targetDomain}:${config.targetPort}${targetPath}${url.search}`
         : `${config.targetProtocol}://${config.targetDomain}${targetPath}${url.search}`;
+    console.log(`====>> [WebSocket] requestUrl:${request.url} targetUrl:${targetUrl}`);
     const upstreamWebSocket = new WebSocket(targetUrl);
     const [client, server] = Object.values(new WebSocketPair());
     server.accept();
