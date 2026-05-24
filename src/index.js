@@ -35,11 +35,9 @@ async function handleWebSocket(request, config) {
     const [client, server] = Object.values(new WebSocketPair());
     server.accept();
     upstreamWebSocket.addEventListener('message', (event) => {
-        console.log(`====>> [WebSocket1] server status:${server.readyState}  message:${JSON.stringify(event.data)}`);
         if (server.readyState === 1) server.send(event.data);
     });
     server.addEventListener('message', (event) => {
-        console.log(`====>> [WebSocket2] server status:${upstreamWebSocket.readyState}  message:${JSON.stringify(event.data)}`);
         if (upstreamWebSocket.readyState === 1) upstreamWebSocket.send(event.data);
     });
     server.addEventListener('close', () => {
