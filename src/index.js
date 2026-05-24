@@ -6,7 +6,7 @@ const PROXY_RULES = [
         targetPort: 8443, 
         targetProtocol: 'wss' 
     },
-    { 
+    {  // local-test => ws://localhost:8787/postman/raw
         localPrefix: '/postman', 
         targetDomain: 'ws.postman-echo.com', 
         targetProtocol: 'wss' 
