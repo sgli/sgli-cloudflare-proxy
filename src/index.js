@@ -35,6 +35,7 @@ async function handleWebSocket(request, config) {
     const [client, server] = Object.values(new WebSocketPair());
     server.accept();
     upstreamWebSocket.addEventListener('message', (event) => {
+        console.log('====>> [WebSocket] server status:%s  message:%s', server.readyState, JSON.stringify(event.data));
         if (server.readyState === 1) server.send(event.data);
     });
     server.addEventListener('message', (event) => {
